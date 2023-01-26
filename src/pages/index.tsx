@@ -16,7 +16,7 @@ export default function Home() {
   return (
    
 
-      <div className=' max-w-7xl mx-auto h-screen'>
+      <div className=' max-w-7xl mx-auto'>
         <div className=' lg:hidden'><Navbar /></div>
 
         <div className=" md:flex">
@@ -27,7 +27,7 @@ export default function Home() {
               <div className=' text-base font-normal'>hearfully weclome to my website</div>
             </div>
 
-            <div className=' rounded-lg shadow-lg mx-5 h-fit bg-white py-5'>
+            <div className=' rounded-lg shadow-lg mx-5 h-fit bg-white sm:py-5'>
               <Services />
             </div>
 

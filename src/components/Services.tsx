@@ -33,7 +33,7 @@ const Services = () => {
                 <div className='flex gap-2 border-b py-2 px-3 bg-pink-100 rounded-md h-32'>
                     <div className=' p-2 rounded-md  h-14 w-14 justify-center items-center flex text-4xl'><FaCalendarCheck /></div>
                     <div>
-                        <div className='text-2xl font-medium capitalize'>python developemnt</div>
+                        <div className='text-2xl font-medium capitalize'>pyth developemnt</div>
                         <div className=' text-gray-600 overflow-hidden h-20 py-1'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque debitis accusamus Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, exercitationem?  sint!</div>
                     </div>
                 </div>
@@ -82,7 +82,7 @@ const Services = () => {
                 <div className='flex gap-2 border-b py-2 px-3 bg-pink-100 rounded-md h-32'>
                     <div className=' p-2 rounded-md  h-14 w-14 justify-center items-center flex text-4xl'><FaCalendarCheck /></div>
                     <div>
-                        <div className='text-2xl font-medium capitalize'>python developemnt</div>
+                        <div className='text-2xl font-medium capitalize'>pyt developemnt</div>
                         <div className=' text-gray-600 overflow-hidden h-20 py-1'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque debitis accusamus Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, exercitationem?  sint!</div>
                     </div>
                 </div>

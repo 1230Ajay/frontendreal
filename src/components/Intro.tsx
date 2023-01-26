@@ -31,7 +31,7 @@ const Intro = () => {
                 {/* contact section  */}
 
 
-                <div className='mx-10 p-5 bg-gray-100 rounded-md'>
+                <div className='sm:mx-10 p-5 bg-gray-100 rounded-md'>
                     <div className='flex gap-2 border-b py-2'>
                         <div className='bg-gray-200 p-2 rounded-md hover:bg-gradient-to-br from-orange-500 to-pink-600 hover:text-white  shadow-lg h-10 w-10 justify-center items-center flex text-2xl'><IoCall /></div>
                         <div>
