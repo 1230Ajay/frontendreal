@@ -20,7 +20,7 @@ import Uform from '@/components/Updatform';
 
 
 export async function getServerSideProps() {
-    const res = await axios.get("http://127.0.0.1:8000/Contents/")
+    const res = await axios.get("https://api-w59c.onrender.com/Contents/")
     return {
         props: { data: res.data }
     }
@@ -53,7 +53,7 @@ const admin = ({ data }) => {
             data.append('desc',values.desc)
             data.append('technologies',values.technologies)
 
-            await axios.post("http://127.0.0.1:8000/Contents/",data).then((res) => {
+            await axios.post("https://api-w59c.onrender.com/Contents/",data).then((res) => {
                 alert('data is added successfully')
             }).catch((e) => {
                 console.log(e)
@@ -66,7 +66,7 @@ const admin = ({ data }) => {
 
 
   const onDelete = async(dt) =>{
-    await axios.delete(`http://127.0.0.1:8000/Contents/${dt.id}`).then(r=>alert('data is deleted'))
+    await axios.delete(`https://api-w59c.onrender.com/Contents/${dt.id}`).then(r=>alert('data is deleted'))
   }
 
 
