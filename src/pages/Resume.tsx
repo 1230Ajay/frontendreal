@@ -1,26 +1,16 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.css'
-import axios from 'axios'
+import React from 'react'
+import { FaCalendarCheck } from 'react-icons/fa'
 import Navbar from '@/components/Navbar'
 import Intro from '@/components/Intro'
-import Services from '@/components/Services'
+import Resume from '@/components/Resume'
 
-
-const inter = Inter({ subsets: ['latin'] })
-
-
-
-export default function Home() {
-  return (
-   
-
-      <div className=' max-w-7xl mx-auto h-screen'>
+const resume = () => {
+    return (
+        <div className=' max-w-7xl mx-auto h-screen'>
         <div className=' lg:hidden'><Navbar /></div>
 
         <div className=" md:flex">
-          <div className='md:max-w-md md:hidden  lg:inline-flex flex-col py-10'><Intro /></div>
+          <div className='md:max-w-md sm:hidden  lg:inline-flex flex-col py-10'><Intro /></div>
           <div className=' w-full bg-blur-3xl rounded-md lg:h-screen lg:overflow-scroll'>
             <div className=' text-center text-4xl  flex-col justify-center w-full h-[40%] hidden lg:inline-flex font-bold'>
               <div >Welcome</div>
@@ -28,7 +18,7 @@ export default function Home() {
             </div>
 
             <div className=' rounded-lg shadow-lg mx-5 h-fit bg-white py-5'>
-              <Services />
+              <Resume />
             </div>
 
           </div>
@@ -36,5 +26,7 @@ export default function Home() {
       </div>
 
 
-  )
+    )
 }
+
+export default resume
