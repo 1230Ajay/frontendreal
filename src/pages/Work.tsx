@@ -5,7 +5,7 @@ import Intro from '@/components/Intro'
 import axios from 'axios'
 
 export async function getServerSideProps() {
-  const res = await axios.get("http://127.0.0.1:8000/Contents/")
+  const res = await axios.get("https://api-w59c.onrender.com/Contents/")
   return {
       props: { data: res.data }
   }

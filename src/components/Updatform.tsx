@@ -31,7 +31,7 @@ const Uform = () => {
             data.append('desc', values.desc)
             data.append('technologies', values.technologies)
 
-            await axios.put("http://127.0.0.1:8000/Contents/", data).then((res) => {
+            await axios.put("https://api-w59c.onrender.com/Contents/", data).then((res) => {
                 alert('data is added successfully')
             }).catch((e) => {
                 console.log(e)
