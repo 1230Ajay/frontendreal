@@ -7,8 +7,10 @@ import { SiBloglovin, SiMaterialdesignicons } from 'react-icons/si';
 import { GrAction, GrFormAdd, GrSearch } from 'react-icons/gr';
 import { MdDelete } from 'react-icons/md'
 import { ImCross } from 'react-icons/im'
-import { useFormik } from 'formik';
+import { Formik, useFormik } from 'formik';
 import { uploadSchema } from '@/components/schema';
+import Addform from '@/components/Addform';
+import Uform from '@/components/Updatform';
 
 
 
@@ -18,7 +20,7 @@ import { uploadSchema } from '@/components/schema';
 
 
 export async function getServerSideProps() {
-    const res = await axios.get("https://api-w59c.onrender.com/Contents/")
+    const res = await axios.get("http://127.0.0.1:8000/Contents/")
     return {
         props: { data: res.data }
     }
@@ -28,6 +30,7 @@ export async function getServerSideProps() {
 const admin = ({ data }) => {
 
     const [add, setAdd] = useState(false)
+    const [btn, setBtn] = useState(false)
 
     const { values, errors, handleChange,touched,setFieldValue , handleSubmit } = useFormik({
         initialValues: {
@@ -46,11 +49,11 @@ const admin = ({ data }) => {
             let data = new FormData();
             data.append('type',values.type)
             data.append('title',values.title)
-            data.append('image',values.image[0])
+            data.append('image',values.image)
             data.append('desc',values.desc)
             data.append('technologies',values.technologies)
 
-            await axios.post("https://api-w59c.onrender.com/Contents/",data).then((res) => {
+            await axios.post("http://127.0.0.1:8000/Contents/",data).then((res) => {
                 alert('data is added successfully')
             }).catch((e) => {
                 console.log(e)
@@ -63,7 +66,7 @@ const admin = ({ data }) => {
 
 
   const onDelete = async(dt) =>{
-    await axios.delete(`https://api-w59c.onrender.com/Contents/${dt.id}`).then(r=>alert('data is deleted'))
+    await axios.delete(`http://127.0.0.1:8000/Contents/${dt.id}`).then(r=>alert('data is deleted'))
   }
 
 
@@ -97,137 +100,9 @@ const admin = ({ data }) => {
                         <div className="flex items-center justify-center p-12">
 
                             <div className=' absolute top-10 right-10'><button onClick={() => { setAdd(false) }}><ImCross /></button></div>
-
+                            
                             <div className="mx-auto w-full max-w-[550px] bg-white">
-                             
-                                    <form
-                                        className="py-6 px-9"
-                                        method="POST"
-
-                                    >
-
-
-                                        <div className="mb-5 capitalize">
-                                            <label
-
-                                                className="mb-3 block text-base font-medium text-[#07074D]"
-                                            >
-                                                Select categories
-                                            </label>
-                                            <select
-                                                name="type"
-                                                value={values.type}
-                                                onChange={handleChange}
-
-                                                id="categories"
-                                                placeholder="categories"
-                                                className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md">
-                                                <option value="videos">videos</option>
-                                                <option value="blog">blogs</option>
-                                                <option value="website Design">website design</option>
-                                                <option value="logo design">logo design</option>
-
-                                            </select>
-
-                                        </div>
-
-                                        <div className="mb-5 capitalize">
-                                            <label
-
-                                                className="mb-3 block text-base font-medium text-[#07074D]"
-                                            >
-                                                Title
-                                            </label>
-                                            <input
-                                                type="text"
-                                                value={values.title}
-                                                onChange={handleChange}
-
-                                                name="title"
-                                                id="categories"
-                                                placeholder="Enter title"
-                                                className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-                                            />
-                                            {errors.title && touched.title ? <p className=' text-xs text-red-500 font-bold '>{errors.title}</p> : null}
-                                        </div>
-
-
-
-                                        <div className="mb-5 capitalize">
-                                            <label
-
-                                                className="mb-3 block text-base font-medium text-[#07074D]"
-                                            >
-                                                Image
-                                            </label>
-                                            <input
-
-                                                type="file"
-                                                name="imafe"
-                                                
-                                                onChange={e=>setFieldValue('image',e.target.files)}
-
-                                                id="categories"
-                                                className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] border-dashed outline-none focus:border-[#6A64F1] focus:shadow-md"
-                                            />
-
-                                        </div>
-
-                                        <div className="mb-5 capitalize">
-                                            <label
-
-                                                className="mb-3 block text-base font-medium text-[#07074D]"
-                                            >
-                                                Description
-                                            </label>
-                                            <input
-                                                type="text"
-                                                name="desc"
-                                                value={values.desc}
-                                                onChange={handleChange}
-
-                                                id="categories"
-                                                placeholder=" Enter Description"
-                                                className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-                                            />
-                                            {errors.desc && touched.desc ? <p className=' text-xs text-red-500 font-bold '>{errors.desc}</p> : null}
-                                        </div>
-
-                                        <div className="mb-5 capitalize">
-                                            <label
-
-                                                className="mb-3 block text-base font-medium text-[#07074D]"
-                                            >
-                                                technologies
-                                            </label>
-                                            <input
-                                                type="text"
-                                                name="technologies"
-                                                value={values.technologies}
-                                                onChange={handleChange}
-
-                                                id="categories"
-                                                placeholder="Enter technologies"
-                                                className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-                                            />
-                                            {errors.technologies && touched.technologies ? <p className=' text-xs text-red-500 font-bold '>{errors.technologies}</p> : null}
-                                        </div>
-
-
-
-
-
-
-                                        <div>
-                                            <button type='submit'
-                                                onClick={()=>handleSubmit}
-                                                className="hover:shadow-form w-full rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none"
-                                            >
-                                                Add Content
-                                            </button>
-                                        </div>
-                                    </form>
-                              
+                            {btn ? <div><Uform/></div>:<div><Addform/></div>}
                             </div>
                         </div>
                     </div>
@@ -256,7 +131,7 @@ const admin = ({ data }) => {
                             <div className=''><img className='h-32 relative ' src={dt.image} alt="" /></div>
                             <div className="title font-bold text-2xl my-auto capitalize">{dt.title}</div>
                             <div className='flex space-x-3   my-auto'>
-                                <div className="update"><RiEditFill className='text-2xl text-green-600' /></div>
+                                <div className="update" onClick={()=>setBtn(true)}><RiEditFill className='text-2xl text-green-600' /></div>
                                 <div onClick={()=>onDelete(dt)} className="delete cursor-pointer"><MdDelete className='text-2xl text-red-600 hover:text-rose-400' /></div>
                             </div>
                         </div>

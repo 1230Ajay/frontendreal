@@ -17,7 +17,7 @@ const resume = () => {
               <div className=' text-base font-normal'>hearfully weclome to my website</div>
             </div>
 
-            <div className=' rounded-lg shadow-lg mx-5 h-fit bg-white py-5'>
+            <div className=' rounded-lg shadow-lg sm:mx-5 h-fit bg-white py-5'>
               <Resume />
             </div>
 

@@ -2,9 +2,17 @@ import React from 'react'
 import Work from '@/components/Work'
 import Navbar from '@/components/Navbar'
 import Intro from '@/components/Intro'
+import axios from 'axios'
+
+export async function getServerSideProps() {
+  const res = await axios.get("http://127.0.0.1:8000/Contents/")
+  return {
+      props: { data: res.data }
+  }
+}
 
 
-const work = () => {
+const work = ({data}) => {
   return (
     <div className=' max-w-7xl mx-auto h-screen'>
     <div className=' lg:hidden'><Navbar /></div>
@@ -18,7 +26,7 @@ const work = () => {
         </div>
 
         <div className=' rounded-lg shadow-lg mx-5 h-fit bg-white py-5'>
-          <Work />
+          <Work data={data} />
         </div>
 
       </div>
