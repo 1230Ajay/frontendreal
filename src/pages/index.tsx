@@ -10,9 +10,15 @@ import Services from '@/components/Services'
 
 const inter = Inter({ subsets: ['latin'] })
 
+export async function getServerSideProps() {
+  const res = await axios.get("https://api-w59c.onrender.com/Service")
+  return {
+      props: { data: res.data }
+  }
+}
 
 
-export default function Home() {
+export default function Home({data}) {
   return (
    
 
@@ -28,7 +34,7 @@ export default function Home() {
             </div>
 
             <div className=' rounded-lg shadow-lg mx-5 h-fit bg-white sm:py-5'>
-              <Services />
+              <Services data={data} />
             </div>
 
           </div>

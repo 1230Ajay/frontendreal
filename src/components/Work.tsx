@@ -1,6 +1,9 @@
 import React from 'react'
 
 const Work = ({ data }) => {
+
+const getUniqueData = (data , property) =>{}
+    
     return (
         <div>
             <div className=' font-bold text-4xl px-5 my-5 '>Portfolio</div>
@@ -25,7 +28,8 @@ const Work = ({ data }) => {
 
             </div>
         </div>
-    )
-}
+    )}
+
+
 
 export default Work

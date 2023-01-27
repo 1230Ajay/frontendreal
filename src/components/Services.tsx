@@ -2,11 +2,13 @@ import React from 'react'
 import { FaCalendarCheck } from 'react-icons/fa'
 
 
-const Services = () => {
+
+
+const services = ({data}) => {
     return (
         <div>
 
-            <div className=' capitalize text-2xl font-semibold relative p-5'>
+            <div className=' bg-sec text-pri capitalize text-2xl font-semibold relative p-5'>
                 what i do!
             </div>
 
@@ -14,102 +16,21 @@ const Services = () => {
 
             <div className='service-container px-5 gap-5  my-5 grid md:grid-cols-2'>
 
-                <div className='flex gap-2 border-b py-2 px-3 bg-pink-100 rounded-md h-32'>
-                    <div className=' p-2 rounded-md  h-14 w-14 justify-center items-center flex text-4xl'><FaCalendarCheck /></div>
-                    <div>
-                        <div className='text-2xl font- capitalize'>UI&UX Design</div>
-                        <div className=' text-gray-600 overflow-hidden h-20 py-1'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque debitis accusamus Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, exercitationem?  sint!</div>
-                    </div>
-                </div>
 
-                <div className='flex gap-2 border-b py-2 px-3 bg-red-100 rounded-md h-32'>
-                    <div className=' p-2 rounded-md  h-14 w-14 justify-center items-center flex text-4xl'><FaCalendarCheck /></div>
-                    <div>
-                        <div className='text-2xl font-medium capitalize'>Web developemnt</div>
-                        <div className=' text-gray-600 overflow-hidden h-20 py-1'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque debitis accusamus Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, exercitationem?  sint!</div>
+               {
+                data.map((dt)=>{
+                    return(
+                        <div className='flex gap-2 border-b py-2 px-3  hover:bg-sec bg-pri hover:text-pri shadow-md text-sec rounded-md h-32'>
+                        <div className=' p-2 rounded-md  h-14 w-14 justify-center items-center flex text-4xl relative'><img className=' absolute bg-cover object-cover object-center' src={dt.icon} alt="" /></div>
+                        <div>
+                            <div className='text-2xl font-medium capitalize'>{dt.ser}</div>
+                            <div className=' text-gray-600 overflow-hidden h-20 py-1'>{dt.desc}</div>
+                        </div>
                     </div>
-                </div>
-
-                <div className='flex gap-2 border-b py-2 px-3 bg-pink-100 rounded-md h-32'>
-                    <div className=' p-2 rounded-md  h-14 w-14 justify-center items-center flex text-4xl'><FaCalendarCheck /></div>
-                    <div>
-                        <div className='text-2xl font-medium capitalize'>pyth developemnt</div>
-                        <div className=' text-gray-600 overflow-hidden h-20 py-1'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque debitis accusamus Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, exercitationem?  sint!</div>
-                    </div>
-                </div>
-
-                <div className='flex gap-2 border-b py-2 px-3 bg-red-100 rounded-md h-32'>
-                    <div className=' p-2 rounded-md  h-14 w-14 justify-center items-center flex text-4xl'><FaCalendarCheck /></div>
-                    <div>
-                        <div className='text-2xl font-medium capitalize'>graphic dessign</div>
-                        <div className=' text-gray-600 overflow-hidden h-20 py-1'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque debitis accusamus Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, exercitationem?  sint!</div>
-                    </div>
-                </div>
-
-                <div className='flex gap-2 border-b py-2 px-3 bg-pink-100 rounded-md h-32'>
-                    <div className=' p-2 rounded-md  h-14 w-14 justify-center items-center flex text-4xl'><FaCalendarCheck /></div>
-                    <div>
-                        <div className='text-2xl font-medium capitalize'>deployingwebsite</div>
-                        <div className=' text-gray-600 overflow-hidden h-20 py-1'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque debitis accusamus Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, exercitationem?  sint!</div>
-                    </div>
-                </div>
-
-                <div className='flex gap-2 border-b py-2 px-3 bg-red-100 rounded-md h-32'>
-                    <div className=' p-2 rounded-md  h-14 w-14 justify-center items-center flex text-4xl'><FaCalendarCheck /></div>
-                    <div>
-                        <div className='text-2xl font-medium capitalize'>deployingwebsite</div>
-                        <div className=' text-gray-600 overflow-hidden h-20 py-1'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque debitis accusamus Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, exercitationem?  sint!</div>
-                    </div>
-                </div>
-
-
-                <div className='flex gap-2 border-b py-2 px-3 bg-pink-100 rounded-md h-32'>
-                    <div className=' p-2 rounded-md  h-14 w-14 justify-center items-center flex text-4xl'><FaCalendarCheck /></div>
-                    <div>
-                        <div className='text-2xl font- capitalize'>UI&UX Design</div>
-                        <div className=' text-gray-600 overflow-hidden h-20 py-1'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque debitis accusamus Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, exercitationem?  sint!</div>
-                    </div>
-                </div>
-
-                <div className='flex gap-2 border-b py-2 px-3 bg-red-100 rounded-md h-32'>
-                    <div className=' p-2 rounded-md  h-14 w-14 justify-center items-center flex text-4xl'><FaCalendarCheck /></div>
-                    <div>
-                        <div className='text-2xl font-medium capitalize'>Web developemnt</div>
-                        <div className=' text-gray-600 overflow-hidden h-20 py-1'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque debitis accusamus Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, exercitationem?  sint!</div>
-                    </div>
-                </div>
-
-                <div className='flex gap-2 border-b py-2 px-3 bg-pink-100 rounded-md h-32'>
-                    <div className=' p-2 rounded-md  h-14 w-14 justify-center items-center flex text-4xl'><FaCalendarCheck /></div>
-                    <div>
-                        <div className='text-2xl font-medium capitalize'>pyt developemnt</div>
-                        <div className=' text-gray-600 overflow-hidden h-20 py-1'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque debitis accusamus Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, exercitationem?  sint!</div>
-                    </div>
-                </div>
-
-                <div className='flex gap-2 border-b py-2 px-3 bg-red-100 rounded-md h-32'>
-                    <div className=' p-2 rounded-md  h-14 w-14 justify-center items-center flex text-4xl'><FaCalendarCheck /></div>
-                    <div>
-                        <div className='text-2xl font-medium capitalize'>graphic dessign</div>
-                        <div className=' text-gray-600 overflow-hidden h-20 py-1'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque debitis accusamus Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, exercitationem?  sint!</div>
-                    </div>
-                </div>
-
-                <div className='flex gap-2 border-b py-2 px-3 bg-pink-100 rounded-md h-32'>
-                    <div className=' p-2 rounded-md  h-14 w-14 justify-center items-center flex text-4xl'><FaCalendarCheck /></div>
-                    <div>
-                        <div className='text-2xl font-medium capitalize'>deployingwebsite</div>
-                        <div className=' text-gray-600 overflow-hidden h-20 py-1'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque debitis accusamus Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, exercitationem?  sint!</div>
-                    </div>
-                </div>
-
-                <div className='flex gap-2 border-b py-2 px-3 bg-red-100 rounded-md h-32'>
-                    <div className=' p-2 rounded-md  h-14 w-14 justify-center items-center flex text-4xl'><FaCalendarCheck /></div>
-                    <div>
-                        <div className='text-2xl font-medium capitalize'>deployingwebsite</div>
-                        <div className=' text-gray-600 overflow-hidden h-20 py-1'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque debitis accusamus Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, exercitationem?  sint!</div>
-                    </div>
-                </div>
+                    )
+                })
+               }
+               
 
             </div>
 
@@ -129,4 +50,4 @@ const Services = () => {
     )
 }
 
-export default Services
+export default services
