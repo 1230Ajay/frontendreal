@@ -3,8 +3,22 @@ import { FaCalendarCheck } from 'react-icons/fa'
 import Navbar from '@/components/Navbar'
 import Intro from '@/components/Intro'
 import Resume from '@/components/Resume'
+import axios from 'axios'
 
-const resume = () => {
+export async function getServerSideProps() {
+  const exp = await axios.get("https://api-w59c.onrender.com/Experience/")
+  const edu = await axios.get("https://api-w59c.onrender.com/Education/")
+  return {
+      props: { edu: edu.data ,
+               exp: exp.data
+      }
+      
+  }
+}
+
+
+
+const resume = ({edu , exp}) => {
     return (
         <div className=' max-w-7xl mx-auto h-screen'>
         <div className=' lg:hidden'><Navbar /></div>
@@ -18,7 +32,7 @@ const resume = () => {
             </div>
 
             <div className=' rounded-lg shadow-lg sm:mx-5 h-fit bg-white py-5'>
-              <Resume />
+              <Resume edu={edu} exp={exp} />
             </div>
 
           </div>

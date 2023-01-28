@@ -6,7 +6,7 @@ import { FaCalendarCheck } from 'react-icons/fa'
 
 const services = ({data}) => {
     return (
-        <div className='-mt-28 sm:m-0'>
+        <div className=''>
 
             <div className=' bg-sec text-pri capitalize text-2xl font-semibold relative p-5'>
                 what i do!
