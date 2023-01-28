@@ -6,7 +6,7 @@ import { MdMarkEmailUnread, MdLocationOn } from 'react-icons/md'
 
 const Intro = () => {
     return (
-        <div className='h-screen'>
+        <div className='h-fit'>
 
 
             {/* image section */}

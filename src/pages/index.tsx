@@ -22,7 +22,7 @@ export default function Home({data}) {
   return (
    
 
-      <div className=' max-w-7xl mx-auto'>
+      <div className=' max-w-7xl mx-auto h-fit'>
         <div className=' lg:hidden'><Navbar /></div>
 
         <div className=" md:flex">
@@ -33,7 +33,7 @@ export default function Home({data}) {
               <div className=' text-base font-normal'>hearfully weclome to my website</div>
             </div>
 
-            <div className=' rounded-lg shadow-lg mx-5 h-fit bg-white sm:py-5'>
+            <div className=' rounded-lg shadow-lg mx-5 h-fit bg-white  sm:py-5'>
               <Services data={data} />
             </div>
 
