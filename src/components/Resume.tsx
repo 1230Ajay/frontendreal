@@ -12,14 +12,14 @@ const Resume = ({edu,exp}) => {
 
 
                 <div className="education space-y-3">
-                    <div className=' capitalize text-2xl py-3 font-medium flex gap-3 items-center '> <GiGraduateCap className='text-4xl text0-sec text-sec' /> Education</div>
+                    <div className=' capitalize text-2xl py-3 font-medium flex gap-3 items-center'> <GiGraduateCap className='text-4xl text0-sec text-sec' /> Education</div>
 
                     {
                         edu.map((education)=>{
                             return(
                                 <div className='max-w-sm border-b flex flex-col justify-center px-3 border-sec hover:text-pri hover:bg-sec rounded-md h-32 mx-auto'>
                                 <div className="duration text-sm ">{education.year}</div>
-                                <div className="position font-medium text-2xl  capitalize">
+                                <div className="position font-medium text-2xl  capitalize ">
                                    {education.cource}
                                 </div>
                                 <div className="orgrnistion capitalize">{education.institute}</div>

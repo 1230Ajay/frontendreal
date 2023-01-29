@@ -11,7 +11,7 @@ const Intro = () => {
 
             {/* image section */}
 
-            <div className='h-60 w-56 overflow-hidden relative mx-auto rounded-lg shadow-md flex'>
+            <div className='h-56 w-56 overflow-hidden relative mx-auto rounded-lg shadow-md flex'>
                 <img src="/index3.jpeg" className=' absolute rounded-md z-10' alt="" />
             </div>
             <div className=' bg-white lg:shadow-lg relative rounded-lg -z-0 -top-20 mx-5 py-10'>
@@ -31,36 +31,36 @@ const Intro = () => {
                 {/* contact section  */}
 
 
-                <div className='sm:mx-10 p-5 bg-sec rounded-md shadow-lg'>
+                <div className='sm:mx-10 p-5 pri text-sec rounded-md shadow-lg'>
                     <div className='flex gap-2 border-b py-2'>
-                        <div className='bg-pri text-sec hover:bg-thi  p-2 rounded-md  shadow-lg h-10 w-10 justify-center items-center flex text-2xl'><IoCall /></div>
+                        <div className='bg-sec text-pri hover:bg-pri hover:text-sec  p-2 rounded-md  shadow-lg h-10 w-10 justify-center items-center flex text-2xl'><IoCall /></div>
                         <div>
-                            <div className='text-sm text-thi'>Phone</div>
-                            <div className='text-xl text-pri'>+91 7489463450</div>
+                            <div className='text-sm text-gray-400'>Phone</div>
+                            <div className='text-xl text-sec'>+91 7489463450</div>
                         </div>
                     </div>
 
                     <div className='flex gap-2 border-b py-2'>
-                        <div className='bg-pri text-sec hover:bg-thi  p-2 rounded-md shadow-lg h-10 w-10 justify-center items-center flex text-2xl'><MdMarkEmailUnread /></div>
+                        <div className='bg-sec text-pri hover:bg-pri hover:text-sec  p-2 rounded-md shadow-lg h-10 w-10 justify-center items-center flex text-2xl'><MdMarkEmailUnread /></div>
                         <div>
-                            <div className='text-sm text-thi'>Email</div>
-                            <div className='text-xl text-pri'>arryroy1101@gmail.com</div>
+                            <div className='text-sm text-gray-400'>Email</div>
+                            <div className='text-xl text-sec'>arryroy1101@gmail.com</div>
                         </div>
                     </div>
 
                     <div className='flex gap-2 border-b py-2'>
-                        <div className='bg-pri text-sec hover:bg-thi  p-2 rounded-md  shadow-lg h-10 w-10 justify-center items-center flex text-2xl'><MdLocationOn /></div>
+                        <div className='bg-sec text-pri hover:bg-pri hover:text-sec  p-2 rounded-md  shadow-lg h-10 w-10 justify-center items-center flex text-2xl'><MdLocationOn /></div>
                         <div>
-                            <div className='text-sm text-thi'>Location</div>
-                            <div className='text-xl text-pri'>Narsinghpur MP , India</div>
+                            <div className='text-sm text-gray-400'>Location</div>
+                            <div className='text-xl text-sec'>Narsinghpur MP , India</div>
                         </div>
                     </div>
 
                     <div className='flex gap-2 border-b py-2'>
-                        <div className='bg-pri text-sec hover:bg-thi  p-2 rounded-md  shadow-lg h-10 w-10 justify-center items-center flex text-2xl'><FaCalendarCheck /></div>
+                        <div className='bg-sec text-pri hover:bg-pri hover:text-sec  p-2 rounded-md  shadow-lg h-10 w-10 justify-center items-center flex text-2xl'><FaCalendarCheck /></div>
                         <div>
-                            <div className='text-sm text-thi'>Birthday</div>
-                            <div className='text-xl text-pri'>3 April 2003</div>
+                            <div className='text-sm text-gray-400'>Birthday</div>
+                            <div className='text-xl text-sec'>3 April 2003</div>
                         </div>
                     </div>
 

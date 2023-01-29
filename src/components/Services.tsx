@@ -8,7 +8,7 @@ const services = ({data}) => {
     return (
         <div className=''>
 
-            <div className=' bg-sec text-pri capitalize text-2xl font-semibold relative p-5'>
+            <div className='text-sec capitalize text-2xl font-semibold relative p-5'>
                 what i do!
             </div>
 
