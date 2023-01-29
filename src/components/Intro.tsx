@@ -16,7 +16,8 @@ const Intro = () => {
             </div>
             <div className=' bg-white lg:shadow-lg relative rounded-lg -z-0 -top-20 mx-5 py-10'>
                 {/* name section */}
-
+                    
+                    
                 <div className='my-3 pt-20'>
                     <div className=' capitalize text-2xl text-sec font-semibold text-center'>Ajay malah</div>
                     <div className=' capitalize text-center text-gray-600'>full-stack developer</div>
