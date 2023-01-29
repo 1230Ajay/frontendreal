@@ -4,33 +4,33 @@ import { FaCalendarCheck } from 'react-icons/fa'
 
 
 
-const services = ({data}) => {
+const services = ({ data }) => {
     return (
         <div className=''>
 
-            <div className='text-sec capitalize text-2xl font-semibold relative p-5 '>
+            <div className='text-pri capitalize text-2xl font-semibold relative p-5 '>
                 what i do!
             </div>
 
             {/* service-section */}
 
-            <div className='service-container px-5 gap-5  my-5 grid md:grid-cols-2 bg-gray-100 py-10'>
+            <div className='service-container px-5 gap-5  my-5 grid md:grid-cols-2 bg-thi py-10'>
 
 
-               {
-                data.map((dt)=>{
-                    return(
-                        <div className='flex gap-2 border-b py-2 px-3  hover:bg-sec bg-pri hover:text-pri shadow-md text-sec rounded-md h-32'>
-                        <div className=' p-2 rounded-md  h-14 w-14 justify-center items-center flex text-4xl relative'><img className=' absolute bg-cover object-cover object-center' src={dt.icon} alt="" /></div>
-                        <div>
-                            <div className='text-2xl font-medium capitalize'>{dt.ser}</div>
-                            <div className=' text-gray-600 overflow-hidden h-20 py-1'>{dt.desc}</div>
-                        </div>
-                    </div>
-                    )
-                })
-               }
-               
+                {
+                    data.map((dt) => {
+                        return (
+                            <div className='flex gap-2 border-b py-2 px-3  hover:bg-pri bg-sec text-pri hover:text-sec shadow-md rounded-md h-32'>
+                                <div className=' p-2 rounded-md  h-14 w-14 justify-center items-center flex text-4xl relative'><img className=' absolute bg-cover object-cover object-center' src={dt.icon} alt="" /></div>
+                                <div>
+                                    <div className='text-2xl font-medium capitalize'>{dt.ser}</div>
+                                    <div className='overflow-hidden h-20 py-1'>{dt.desc}</div>
+                                </div>
+                            </div>
+                        )
+                    })
+                }
+
 
             </div>
 

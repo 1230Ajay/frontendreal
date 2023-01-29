@@ -23,7 +23,7 @@ export default function Home({ data }) {
   return (
 
 
-    <div className=' max-w-7xl mx-auto h-fit bg-gray-100'>
+    <div className=' max-w-7xl mx-auto h-fit bg-thi'>
       <div className=' lg:hidden'><Navbar /></div>
 
       <div className=" md:flex">

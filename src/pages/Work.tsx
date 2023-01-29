@@ -15,7 +15,7 @@ export async function getServerSideProps() {
 
 const work = ({data}) => {
   return (
-    <div className=' max-w-7xl mx-auto h-screen bg-gray-100'>
+    <div className=' max-w-7xl mx-auto h-screen bg-thi'>
     <div className=' lg:hidden'><Navbar /></div>
 
     <div className=" md:flex">

@@ -30,7 +30,7 @@ const Navbar = () => {
 
   return (
 
-    <div className=' lg:hidden'>
+    <div className=' lg:hidden mb-10'>
       <div className=' justify-between flex px-10 py-3 bg-pri shadow-md'>
         <nav className='logo font-semibold text-3xl text-sec '>Ajay</nav>
         <div>
