@@ -2,6 +2,7 @@ import React from 'react'
 import Contact from '@/components/Contact'
 import Intro from '@/components/Intro'
 import Navbar from '@/components/Navbar'
+import Navlg from '@/components/Navlg'
 
 const contact = () => {
   return (
@@ -15,7 +16,9 @@ const contact = () => {
           <div >Welcome</div>
           <div className=' text-base font-normal'>hearfully weclome to my website</div>
         </div>
-
+        <div>
+           <Navlg/>
+          </div>
         <div className=' rounded-lg shadow-lg mx-5 h-fit bg-white py-5'>
           <Contact />
         </div>

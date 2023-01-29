@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar'
 import Intro from '@/components/Intro'
 import Resume from '@/components/Resume'
 import axios from 'axios'
+import Navlg from '@/components/Navlg'
 
 export async function getServerSideProps() {
   const exp = await axios.get("https://api-w59c.onrender.com/Experience/")
@@ -30,7 +31,9 @@ const resume = ({edu , exp}) => {
               <div >Welcome</div>
               <div className=' text-base font-normal'>hearfully weclome to my website</div>
             </div>
-
+            <div>
+           <Navlg/>
+          </div>
             <div className=' rounded-lg shadow-lg sm:mx-5 h-fit bg-white py-5'>
               <Resume edu={edu} exp={exp} />
             </div>

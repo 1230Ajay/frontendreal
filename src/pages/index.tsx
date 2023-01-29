@@ -6,6 +6,7 @@ import axios from 'axios'
 import Navbar from '@/components/Navbar'
 import Intro from '@/components/Intro'
 import Services from '@/components/Services'
+import Navlg from '@/components/Navlg'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -32,6 +33,9 @@ export default function Home({data}) {
               <div >Welcome</div>
               <div className=' text-base font-normal'>hearfully weclome to my website</div>
             </div>
+            <div>
+           <Navlg/>
+          </div>
 
             <div className=' rounded-lg shadow-lg mx-5 h-fit bg-white  sm:py-5'>
               <Services data={data} />

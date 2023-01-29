@@ -3,6 +3,7 @@ import Work from '@/components/Work'
 import Navbar from '@/components/Navbar'
 import Intro from '@/components/Intro'
 import axios from 'axios'
+import Navlg from '@/components/Navlg'
 
 export async function getServerSideProps() {
   const res = await axios.get("https://api-w59c.onrender.com/Contents/")
@@ -24,7 +25,9 @@ const work = ({data}) => {
           <div >Welcome</div>
           <div className=' text-base font-normal'>hearfully weclome to my website</div>
         </div>
-
+        <div>
+           <Navlg/>
+          </div>
         <div className=' rounded-lg shadow-lg mx-5 h-fit bg-white py-5'>
           <Work data={data} />
         </div>
