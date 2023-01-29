@@ -21,7 +21,7 @@ export async function getServerSideProps() {
 
 const resume = ({edu , exp}) => {
     return (
-        <div className=' max-w-7xl mx-auto h-screen'>
+        <div className=' max-w-7xl mx-auto h-screen bg-gray-100 '>
         <div className=' lg:hidden'><Navbar /></div>
 
         <div className=" md:flex">

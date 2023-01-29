@@ -2,9 +2,9 @@ import React from 'react'
 
 const blog = () => {
   return (
-    <div>
+    <div className='bg-gray-100'>
             <div className=' font-bold text-4xl px-5 my-5 text-sec '>Blogs</div>
-            <div className='grid md:grid-cols-2 bg-pri'>
+            <div className='grid md:grid-cols-2'>
 
                 <div className=' content-container bg-pri hover:border border-sec border-opacity-30 ease-in-out shadow-lg hover:shadow-none px-5 mx-5 py-5 my-5 rounded-md'>
                     <div className='bg-red-200 object-cover content-center w-full h-60 rounded-md'><img src="/index.jpeg" className='rounded-md h-full' alt="" /></div>

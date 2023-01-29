@@ -6,7 +6,7 @@ import Navlg from '@/components/Navlg'
 
 const Bolg = () => {
   return (
-    <div className=' max-w-7xl mx-auto h-screen '>
+    <div className=' max-w-7xl mx-auto h-screen bg-gray-100'>
       <div className=' lg:hidden'><Navbar /></div>
 
       <div className=" md:flex">
@@ -19,7 +19,7 @@ const Bolg = () => {
           <div>
            <Navlg/>
           </div>
-          <div className=' rounded-lg shadow-lg mx-5 my-5  h-fit bg-white py-5'>
+          <div className=' rounded-lg shadow-lg  h-fit py-5'>
             <Blog />
           </div>
 

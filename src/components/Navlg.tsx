@@ -7,15 +7,18 @@ import { RiContactsFill } from 'react-icons/ri'
 import Link from 'next/link'
 
 const Navlg = () => {
-    return (
-        <div className='relative'>
-            <div className=' hidden lg:inline-flex gap-5 bg-white shadow-lg h-20 w-96 absolute right-10 justify-center items-center rounded-md '>
-                <Link href={'/'}> <div className=' text-sec hover:bg-sec hover:text-pri h-12 w-12 flex justify-center items-center rounded-md active:bg-sec cursor-pointer'><AiFillHome className='text-3xl' /></div></Link>
-                <Link href={'/Resume'}> <div className=' text-sec hover:bg-sec hover:text-pri h-12 w-12 flex justify-center items-center rounded-md active:bg-sec cursor-pointer'><FaClipboard className='text-3xl' /></div></Link>
-                <Link href={'/Work'}> <div className=' text-sec hover:bg-sec hover:text-pri h-12 w-12 flex justify-center items-center rounded-md active:bg-sec cursor-pointer'><MdWork className='text-3xl' /></div></Link>
-                <Link href={'/Blog'}> <div className=' text-sec hover:bg-sec hover:text-pri h-12 w-12 flex justify-center items-center rounded-md active:bg-sec cursor-pointer'><FaMicroblog className='text-3xl' /></div></Link>
-                <Link href={'/Contact'}><div className=' text-sec hover:bg-sec hover:text-pri h-12 w-12 flex justify-center items-center rounded-md active:bg-sec cursor-pointer'><RiContactsFill className='text-3xl' /></div></Link>
-            </div>
+    return ( 
+        
+        <div>
+            <div className='relative hidden lg:inlin-flex'>
+           <div className='flex gap-10 absolute right-10 shadow-lg p-2 rounded-md'>
+            <Link className='h-14 flex justify-center items-center w-14 hover:bg-sec hover:text-pri text-sec rounded-md p-auto' href={'/'}><AiFillHome className='h-10 w-10 m-auto'/></Link>
+            <Link className='h-14 flex justify-center items-center w-14 hover:bg-sec hover:text-pri text-sec rounded-md p-auto' href={'/Resume'}><FaClipboard className='h-10 w-10 m-auto'/></Link>
+            <Link className='h-14 flex justify-center items-center w-14 hover:bg-sec hover:text-pri text-sec rounded-md p-auto' href={'/Work'}><MdWork className='h-10 w-10 m-auto'/></Link>
+            <Link className='h-14 flex justify-center items-center w-14 hover:bg-sec hover:text-pri text-sec rounded-md p-auto' href={'/Blog'}><FaMicroblog className='h-10 w-10 m-auto'/></Link>
+            <Link className='h-14 flex justify-center items-center w-14 hover:bg-sec hover:text-pri text-sec rounded-md p-auto' href={'/Contact'}><RiContactsFill className='h-10 w-10 m-auto'/></Link>
+           </div>
+        </div>
         </div>
     )
 }
