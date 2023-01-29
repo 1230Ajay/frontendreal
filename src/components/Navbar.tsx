@@ -23,6 +23,7 @@ function MobileNav({open , setOpen}){
 
 
 
+
 const Navbar = () => {
 
   const [open, setOpen] = useState(false);
@@ -36,7 +37,6 @@ const Navbar = () => {
       </div>
 
       <MobileNav open={open} setOpen={setOpen} ></MobileNav>
-
     </div>
 
   )
