@@ -11,8 +11,8 @@ const Intro = () => {
 
             {/* image section */}
 
-            <div className='h-56 w-56  mx-auto rounded-lg shadow-md flex'>
-                <img src="/index.jpeg" className=' rounded-md z-10' alt="" />
+            <div className='h-60 w-56 overflow-hidden relative mx-auto rounded-lg shadow-md flex'>
+                <img src="/index3.jpeg" className=' absolute rounded-md z-10' alt="" />
             </div>
             <div className=' bg-white lg:shadow-lg relative rounded-lg -z-0 -top-20 mx-5 py-10'>
                 {/* name section */}
