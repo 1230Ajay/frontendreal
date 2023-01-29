@@ -7,7 +7,7 @@ const Resume = ({edu,exp}) => {
     return (
         <div className=''>
             <div className=' font-bold text-4xl text-sec px-5 my-5 '>  Resume</div>
-            <div className='service-container px-5 gap-5  my-5 grid  sm:grid-cols-2'>
+            <div className='service-container px-5 gap-5  my-5 grid  sm:grid-cols-2 bg-gray-100 py-10'>
 
 
 
@@ -17,7 +17,7 @@ const Resume = ({edu,exp}) => {
                     {
                         edu.map((education)=>{
                             return(
-                                <div className='max-w-sm border-b flex flex-col justify-center px-3 border-sec hover:text-pri hover:bg-sec rounded-md h-32 mx-auto'>
+                                <div className='max-w-sm border-b flex flex-col justify-center px-3 border-sec hover:text-pri hover:bg-sec rounded-md h-32 mx-auto bg-pri'>
                                 <div className="duration text-sm ">{education.year}</div>
                                 <div className="position font-medium text-2xl  capitalize ">
                                    {education.cource}
@@ -36,7 +36,7 @@ const Resume = ({edu,exp}) => {
                   { 
                     exp.map((experience)=>{
                             return(
-                                <div className='max-w-sm border-b flex flex-col justify-center px-3 border-sec hover:text-pri hover:bg-sec rounded-md h-32 mx-auto'>
+                                <div className='max-w-sm border-b flex flex-col justify-center px-3 border-sec hover:text-pri hover:bg-sec rounded-md h-32 mx-auto bg-pri'>
                                 <div className="duration text-sm ">{experience.year}</div>
                                 <div className="position font-medium text-2xl  capitalize">
                                    {experience.position}

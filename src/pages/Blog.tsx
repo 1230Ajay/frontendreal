@@ -22,7 +22,7 @@ const Bolg = () => {
           <div className=' rounded-lg shadow-lg  h-fit py-5'>
             <Blog />
           </div>
-
+          
         </div>
       </div>
     </div>

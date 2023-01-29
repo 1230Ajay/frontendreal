@@ -11,13 +11,14 @@ const Intro = () => {
 
             {/* image section */}
 
-            <div className='h-56 w-56 overflow-hidden relative mx-auto rounded-lg shadow-md flex'>
-                <img src="/index3.jpeg" className=' absolute rounded-md z-10' alt="" />
+            <div className='h-56 w-56 overflow-hidden bg-white relative mx-auto rounded-lg shadow-md flex'>
+                <img src="/man-profile.svg" className=' absolute rounded-md z-10' alt="" />
             </div>
             <div className=' bg-white lg:shadow-lg relative rounded-lg -z-0 -top-20 mx-5 py-10'>
                 {/* name section */}
                     
-                    
+                  
+
                 <div className='my-3 pt-20'>
                     <div className=' capitalize text-2xl text-sec font-semibold text-center'>Ajay malah</div>
                     <div className=' capitalize text-center text-gray-600'>full-stack developer</div>
@@ -32,7 +33,7 @@ const Intro = () => {
                 {/* contact section  */}
 
 
-                <div className='sm:mx-10 p-5 pri text-sec rounded-md shadow-lg'>
+                <div className='sm:mx-10 p-5 pri backdrop-filter backdrop-blur-sm text-sec rounded-md shadow-lg'>
                     <div className='flex gap-2 border-b py-2'>
                         <div className='bg-sec text-pri hover:bg-pri hover:text-sec  p-2 rounded-md  shadow-lg h-10 w-10 justify-center items-center flex text-2xl'><IoCall /></div>
                         <div>

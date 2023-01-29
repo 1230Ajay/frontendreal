@@ -8,7 +8,7 @@ import { ImCross } from 'react-icons/im'
 function MobileNav({open , setOpen}){
   return (
     <div>
-      <div className={`${open ? " inline-flex" : "hidden"} bg-pri flex-col z-20 text-center fixed w-full capitalize py-5 space-y-3 absolute`}>
+      <div className={`${open ? " inline-flex" : "hidden"} bg-pri flex-col z-20 text-center  w-full capitalize py-5 space-y-3 absolute`}>
         <div className=' p-1 text-xl font-medium text-sec hover:bg-sec hover:text-pri mx-3 capitalize'><Link href={'/'}> <div>home</div></Link></div>
         <div className=' p-1 text-xl font-medium text-sec hover:bg-sec hover:text-pri mx-3 capitalize'><Link href={'/Resume'}><div>resume</div></Link></div>
         <div className=' p-1 text-xl font-medium text-sec hover:bg-sec hover:text-pri mx-3 capitalize'><Link href={'/Work'}><div>work</div></Link></div>

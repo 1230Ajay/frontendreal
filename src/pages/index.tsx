@@ -37,7 +37,7 @@ export default function Home({ data }) {
             <Navlg />
           </div>
 
-          <div className=' rounded-lg shadow-lg mx-5 h-fit bg-white  sm:py-5'>
+          <div className=' rounded-lg shadow-lg mx-5 h-fit  bg-white sm:py-5'>
             <Services data={data} />
           </div>
 

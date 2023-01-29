@@ -15,7 +15,7 @@ const getUniqueData = (data , property) =>{}
                 <button className=' hover:text-red-400 font-medium ease-in-out duration-300'>Graphic design</button>
             </div>
 
-            <div className=' grid sm:grid-cols-2'>
+            <div className=' grid sm:grid-cols-2 bg-gray-100'>
 
                 { data.map((dt)=>{
                     return  <div className=' shadow-md content-container bg-white px-5 mx-5 py-5 my-5 rounded-md'>

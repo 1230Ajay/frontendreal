@@ -8,13 +8,13 @@ const services = ({data}) => {
     return (
         <div className=''>
 
-            <div className='text-sec capitalize text-2xl font-semibold relative p-5'>
+            <div className='text-sec capitalize text-2xl font-semibold relative p-5 '>
                 what i do!
             </div>
 
             {/* service-section */}
 
-            <div className='service-container px-5 gap-5  my-5 grid md:grid-cols-2'>
+            <div className='service-container px-5 gap-5  my-5 grid md:grid-cols-2 bg-gray-100 py-10'>
 
 
                {
