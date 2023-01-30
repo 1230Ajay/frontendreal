@@ -20,7 +20,7 @@ const Intro = () => {
                   
 
                 <div className='my-3 pt-20'>
-                    <div className=' capitalize text-2xl text-sec font-semibold text-center'>Ajay malah</div>
+                    <div className=' capitalize text-2xl text-pri font-semibold text-center'>Ajay malah</div>
                     <div className=' capitalize text-center text-gray-600'>full-stack developer</div>
                     <div className=' text-2xl flex justify-center gap-3 my-5'>
                         <button className='bg-sec text-pri hover:bg-pri hover:text-sec p-2 rounded-md  shadow-lg'><RiFacebookFill /></button>

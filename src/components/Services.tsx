@@ -23,7 +23,7 @@ const services = ({ data }) => {
                             <div className='flex gap-2 border-b py-2 px-3  hover:bg-pri bg-sec text-pri hover:text-sec shadow-md rounded-md h-32'>
                                 <div className=' p-2 rounded-md  h-14 w-14 justify-center items-center flex text-4xl relative'><img className=' absolute bg-cover object-cover object-center' src={dt.icon} alt="" /></div>
                                 <div>
-                                    <div className='text-2xl font-medium capitalize'>{dt.ser}</div>
+                                    <div className='text-xl font-medium capitalize'>{dt.ser}</div>
                                     <div className='overflow-hidden h-20 py-1'>{dt.desc}</div>
                                 </div>
                             </div>
