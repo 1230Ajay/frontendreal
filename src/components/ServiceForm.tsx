@@ -24,7 +24,7 @@ const ServiceForm = () => {
             data.append('icon', values.icon[0])
 
 
-            await axios.post("https://api-w59c.onrender.com/Service/", data).then((res) => {
+            await axios.post("http://ajay1101.pythonanywhere.com/Service/", data).then((res) => {
                 alert('Service is added successfully')
             }).catch((e) => {
                 console.log(e)

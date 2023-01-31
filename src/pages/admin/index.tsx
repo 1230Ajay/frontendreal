@@ -19,7 +19,7 @@ import Link from 'next/link';
 
 
 export async function getServerSideProps() {
-    const res = await axios.get("https://api-w59c.onrender.com/Contents/")
+    const res = await axios.get("http://ajay1101.pythonanywhere.com/Contents/")
     return {
         props: { data: res.data }
     }
@@ -34,7 +34,7 @@ const admin = ({ data }) => {
 
 
     const onDelete = async (dt) => {
-        await axios.delete(`https://api-w59c.onrender.com/Contents/${dt.id}`).then(r => alert('data is deleted'))
+        await axios.delete(`http://ajay1101.pythonanywhere.com/Contents/${dt.id}`).then(r => alert('data is deleted'))
     }
 
 

@@ -7,8 +7,8 @@ import axios from 'axios'
 import Navlg from '@/components/Navlg'
 
 export async function getServerSideProps() {
-  const exp = await axios.get("https://api-w59c.onrender.com/Experience/")
-  const edu = await axios.get("https://api-w59c.onrender.com/Education/")
+  const exp = await axios.get("http://ajay1101.pythonanywhere.com/Experience/")
+  const edu = await axios.get("http://ajay1101.pythonanywhere.com/Education/")
   return {
       props: { edu: edu.data ,
                exp: exp.data

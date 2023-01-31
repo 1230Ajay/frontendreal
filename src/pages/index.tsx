@@ -12,7 +12,7 @@ import Navlg from '@/components/Navlg'
 const inter = Inter({ subsets: ['latin'] })
 
 export async function getServerSideProps() {
-  const res = await axios.get("https://api-w59c.onrender.com/Service")
+  const res = await axios.get("http://ajay1101.pythonanywhere.com/Service/")
   return {
     props: { data: res.data }
   }

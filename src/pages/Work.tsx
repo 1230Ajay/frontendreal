@@ -6,7 +6,7 @@ import axios from 'axios'
 import Navlg from '@/components/Navlg'
 
 export async function getServerSideProps() {
-  const res = await axios.get("https://api-w59c.onrender.com/Contents/")
+  const res = await axios.get("http://ajay1101.pythonanywhere.com/Contents/")
   return {
       props: { data: res.data }
   }

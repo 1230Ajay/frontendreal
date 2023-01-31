@@ -27,7 +27,7 @@ const ContentForm = () => {
             data.append('desc',values.desc)
             data.append('technologies',values.technologies)
 
-            await axios.post("https://api-w59c.onrender.com/Contents/",data).then((res) => {
+            await axios.post("http://ajay1101.pythonanywhere.com/Contents/",data).then((res) => {
                 alert('data is added successfully')
             }).catch((e) => {
                 console.log(e)
