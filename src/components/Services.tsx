@@ -1,10 +1,11 @@
+import Link from 'next/link'
 import React from 'react'
 import { FaCalendarCheck } from 'react-icons/fa'
 
 
 
 
-const services = ({ data, data1 , data2 }) => {
+const services = ({ data, data1, data2 }) => {
     return (
         <div className=''>
 
@@ -34,43 +35,40 @@ const services = ({ data, data1 , data2 }) => {
 
             </div>
 
-            <div className='text-pri capitalize text-2xl font-semibold relative p-5 '>
-                my work
+            <div className='text-pri flex items-center justify-between capitalize text-2xl font-semibold relative p-5 '>
+                <div>my work</div>
+                <Link href={'/Work'}> <p className='text-sm font-normal'>more</p></Link>
             </div>
 
-            <div className=' grid sm:grid-cols-2 bg-thi'>
-                
-                { data1.slice(0,4).map((dt)=>{
-                    return  <div className=' shadow-md content-container bg-sec hover:border-pri border border-opacity-30 px-5 mx-5 py-5 my-5 rounded-md'>
-                    <div className='bg-red-200  content-center w-full relative  h-60 rounded-md'><img src={dt.image} className='rounded-md h-full w-full object-cover absolute' alt="" /></div>
-                    <div className=' uppercase mt-3'>{dt.type}</div>
-                    <div className=' capitalize text-2xl font-medium'>{dt.title}</div>
-                </div>
+            <div className=' grid sm:grid-cols-2 bg-thi py-5'>
 
-                }) }
+                {data1.slice(0, 4).map((dt) => {
+                    return <div className=' shadow-md content-container bg-sec hover:bg-pri hover:text-sec border border-opacity-30  mx-5  my-2'>
+                        <div className='bg-red-200  content-center  w-full relative h-40 sm:h-52 '><img src={dt.image} className=' h-full w-full object-cover absolute' alt="" /></div>
+                        <div className='px-2 uppercase text-xs sm:text-base mt-3'>{dt.type}</div>
+                        <div className='px-2 pb-2 capitalize text-xl sm:text-2xl font-medium'>{dt.title}</div>
+                    </div>
+
+                })}
 
             </div>
 
-            <div className='text-pri capitalize text-2xl font-semibold relative p-5 '>
-                blogs
+            <div className='text-pri flex items-center justify-between capitalize text-2xl font-semibold relative p-5 '>
+                <div>blog</div>
+               <Link href={'/Blog'}> <p className='text-sm font-normal'>more</p></Link>
             </div>
 
+            <div className='service-container  gap-2  my-5 grid md:grid-cols-2 bg-thi py-2'>
 
-            <div className='service-container px-5 gap-5  my-5 grid md:grid-cols-2 bg-thi py-10'>
 
+                {data1.slice(0, 4).map((dt) => {
+                    return <div className=' shadow-md content-container bg-sec hover:bg-pri hover:text-sec border border-opacity-30  mx-5  my-2'>
+                        <div className='bg-red-200  content-center  w-full relative h-40 sm:h-52 '><img src={dt.image} className=' h-full w-full object-cover absolute' alt="" /></div>
+                        <div className='px-2 uppercase text-xs sm:text-base mt-3'>{dt.type}</div>
+                        <div className='px-2 pb-2 capitalize text-xl sm:text-2xl font-medium'>{dt.title}</div>
+                    </div>
 
-                {
-                    data2.slice(0,4).map((dt) => {
-                        return (
-                            <div className=' content-container  bg-sec hover:border border-pri border-opacity-30 ease-in-out shadow-lg hover:shadow-none px-5 mx-5 py-5 my-5 rounded-md'>
-                            <div className='bg-red-200 object-cover content-center w-full h-60 rounded-md'><img src="/index.jpeg" className='rounded-md h-full' alt="" /></div>
-                            <div className=' uppercase mt-3'>UI & UX</div>
-                            <div className=' text-2xl font-medium'>Title of item</div>
-                        </div>
-                        )
-                    })
-                }
-
+                })}
 
             </div>
 

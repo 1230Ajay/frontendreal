@@ -3,8 +3,17 @@ import Blog from '@/components/Blog'
 import Navbar from '@/components/Navbar'
 import Intro from '@/components/Intro'
 import Navlg from '@/components/Navlg'
+import axios from 'axios'
 
-const Bolg = () => {
+export async function getServerSideProps() {
+  const res = await axios.get("http://ajay1101.pythonanywhere.com/Contents/")
+  return {
+      props: { data: res.data }
+  }
+}
+
+
+const Bolg = ({data}) => {
   return (
     <div className=' max-w-7xl mx-auto h-screen bg-thi'>
       <div className=' lg:hidden'><Navbar /></div>
@@ -20,7 +29,7 @@ const Bolg = () => {
            <Navlg/>
           </div>
           <div className=' rounded-lg shadow-lg  h-fit py-5'>
-            <Blog />
+            <Blog data={data} />
           </div>
           
         </div>

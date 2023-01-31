@@ -33,7 +33,7 @@ const Intro = () => {
                 {/* contact section  */}
 
 
-                <div className='sm:mx-10 p-5 pri backdrop-filter backdrop-blur-sm text-sec rounded-md shadow-lg bg-pri'>
+                <div className='sm:mx-10 p-5 pri mx-5 backdrop-filter backdrop-blur-sm text-sec rounded-md shadow-lg bg-pri'>
                     <div className='flex gap-2 border-b py-2'>
                         <div className='bg-sec text-pri hover:bg-pri hover:text-sec  p-2 rounded-md  shadow-lg h-10 w-10 justify-center items-center flex text-2xl'><IoCall /></div>
                         <div>
