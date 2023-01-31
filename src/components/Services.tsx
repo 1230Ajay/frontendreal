@@ -4,7 +4,7 @@ import { FaCalendarCheck } from 'react-icons/fa'
 
 
 
-const services = ({ data }) => {
+const services = ({ data, data1 , data2 }) => {
     return (
         <div className=''>
 
@@ -33,6 +33,48 @@ const services = ({ data }) => {
 
 
             </div>
+
+            <div className='text-pri capitalize text-2xl font-semibold relative p-5 '>
+                my work
+            </div>
+
+            <div className=' grid sm:grid-cols-2 bg-thi'>
+                
+                { data1.slice(0,4).map((dt)=>{
+                    return  <div className=' shadow-md content-container bg-sec hover:border-pri border border-opacity-30 px-5 mx-5 py-5 my-5 rounded-md'>
+                    <div className='bg-red-200  content-center w-full relative  h-60 rounded-md'><img src={dt.image} className='rounded-md h-full w-full object-cover absolute' alt="" /></div>
+                    <div className=' uppercase mt-3'>{dt.type}</div>
+                    <div className=' capitalize text-2xl font-medium'>{dt.title}</div>
+                </div>
+
+                }) }
+
+            </div>
+
+            <div className='text-pri capitalize text-2xl font-semibold relative p-5 '>
+                blogs
+            </div>
+
+
+            <div className='service-container px-5 gap-5  my-5 grid md:grid-cols-2 bg-thi py-10'>
+
+
+                {
+                    data2.slice(0,4).map((dt) => {
+                        return (
+                            <div className=' content-container  bg-sec hover:border border-pri border-opacity-30 ease-in-out shadow-lg hover:shadow-none px-5 mx-5 py-5 my-5 rounded-md'>
+                            <div className='bg-red-200 object-cover content-center w-full h-60 rounded-md'><img src="/index.jpeg" className='rounded-md h-full' alt="" /></div>
+                            <div className=' uppercase mt-3'>UI & UX</div>
+                            <div className=' text-2xl font-medium'>Title of item</div>
+                        </div>
+                        )
+                    })
+                }
+
+
+            </div>
+
+
 
             <div className='px-5 my-5'>
                 <div className=' capitalize text-2xl py-3 font-medium text-center'>cleints</div>

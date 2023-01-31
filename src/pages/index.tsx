@@ -13,13 +13,18 @@ const inter = Inter({ subsets: ['latin'] })
 
 export async function getServerSideProps() {
   const res = await axios.get("http://ajay1101.pythonanywhere.com/Service/")
+  const res1 = await axios.get("http://ajay1101.pythonanywhere.com/Contents/")
+  const res2 = await axios.get("http://ajay1101.pythonanywhere.com/Service/")
   return {
-    props: { data: res.data }
+    props: { data: res.data,
+      data1: res1.data,
+      data2: res2.data
+    }
   }
 }
 
 
-export default function Home({ data }) {
+export default function Home({ data,data1,data2 }) {
   return (
 
 
@@ -38,7 +43,7 @@ export default function Home({ data }) {
           </div>
 
           <div className=' rounded-lg shadow-lg mx-5 h-fit  bg-white sm:py-5'>
-            <Services data={data} />
+            <Services data={data} data1={data1} data2={data2} />
           </div>
 
         </div>
