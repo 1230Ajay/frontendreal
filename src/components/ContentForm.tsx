@@ -28,12 +28,12 @@ const ContentForm = () => {
             data.append('technologies',values.technologies)
 
             await axios.post("http://ajay1101.pythonanywhere.com/Contents/",data).then((res) => {
-                alert('data is added successfully')
+                console.log(res)
             }).catch((e) => {
                 console.log(e)
             })
             action.resetForm();
-            console.log(values)
+           
         }
 
     })
