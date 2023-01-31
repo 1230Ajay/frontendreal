@@ -20,8 +20,8 @@ const services = ({ data }) => {
                 {
                     data.map((dt) => {
                         return (
-                            <div className='flex gap-2 border-b py-2 px-3  hover:bg-pri bg-sec text-pri hover:text-sec shadow-md rounded-md h-32'>
-                                <div className=' p-2 rounded-md  h-14 w-14 justify-center items-center flex text-4xl relative'><img className=' absolute bg-cover object-cover object-center' src={dt.icon} alt="" /></div>
+                            <div className='flex gap-3 border-b py-2 px-3  hover:bg-pri bg-sec text-pri hover:text-sec shadow-md rounded-md h-32'>
+                                <div className=' px-3 justify-center rounded-md  h-24 w-24  items-center flex text-4xl relative'><img className=' absolute h-16  bg-cover object-cover object-center' src={dt.icon} alt="" /></div>
                                 <div>
                                     <div className='text-xl font-medium capitalize'>{dt.ser}</div>
                                     <div className='overflow-hidden h-20 py-1'>{dt.desc}</div>

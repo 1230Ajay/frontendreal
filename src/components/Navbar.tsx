@@ -14,7 +14,7 @@ function MobileNav({open , setOpen}){
         <div className=' p-1 text-xl font-medium text-sec hover:bg-sec hover:text-pri mx-3 capitalize'><Link href={'/Work'}><div>work</div></Link></div>
         <div className=' p-1 text-xl font-medium text-sec hover:bg-sec hover:text-pri mx-3 capitalize'><Link href={'/Blog'}><div>blog</div></Link></div>
         <div className=' p-1 text-xl font-medium text-sec hover:bg-sec hover:text-pri mx-3 capitalize'><Link href={'/Contact'}><div>contact</div></Link></div>
-        <div className=' w-32 bg-sec mx-auto rounded-md text-xl text-pri p-1 justify-center'>log in</div>
+        <Link href={'/admin'}><div className=' w-32 bg-sec mx-auto rounded-md text-xl text-pri p-1 justify-center'>log in</div></Link>
       </div>
     </div>
   )
@@ -37,8 +37,7 @@ const Navbar = () => {
           <div onClick={() => { setOpen(!open) }} className="button cursor-pointer rounded-full bg-sec  w-12 h-12 flex justify-center items-center text-pri">{open ? <div><ImCross className=' text-xl' /></div> : <div><GiHamburgerMenu className=' text-3xl' /></div>}</div>
         </div>
       </div>
-
-      <MobileNav open={open} setOpen={setOpen} ></MobileNav>
+      <MobileNav open={open} setOpen={setOpen}></MobileNav>
     </div>
 
   )
